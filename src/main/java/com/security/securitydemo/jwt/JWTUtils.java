@@ -14,6 +14,7 @@ import javax.crypto.SecretKey;
 import java.security.Key;
 import java.util.Date;
 
+// Ютильный класс который умеет парсить, валидировать и извлекать данные из JWT
 
 @Component
 public class JWTUtils {

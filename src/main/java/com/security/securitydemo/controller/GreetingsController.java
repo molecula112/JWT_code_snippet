@@ -44,6 +44,8 @@ public class GreetingsController {
         return "Hello, Admin!";
     }
 
+
+    // Тут важное замечание, зачем мы еще раз устанавливаем контекст безопасности, потому что ручка signin подразумевает о том что пользователь точно не аутентифицирован
     @PostMapping("/signin")
     public ResponseEntity<?> authenticateUser(@RequestBody LoginRequest loginRequest) {
         Authentication authentication;

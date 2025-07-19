@@ -22,6 +22,8 @@ public class AuthEntryPointJwt implements AuthenticationEntryPoint {
 
     public static final Logger logger = LoggerFactory.getLogger(AuthEntryPointJwt.class);
 
+    // Глобальная задача метода commence сформировать и отправить ответ клиенту,
+    // когда неаутентифицированный пользователь пытается получить доступ к защищённому ресурсу.
     @Override
     public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException authException) throws IOException, ServletException {
         logger.error("Unauthorized error: {}", authException.getMessage());
